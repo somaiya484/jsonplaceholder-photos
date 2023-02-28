@@ -1,8 +1,13 @@
-const photo = () =>{
+const photo = async() =>{
     const URL = `https://jsonplaceholder.typicode.com/photos`;
-    fetch(URL)
-    .then(res => res.json())
-    .then(data => getPhotos(data))
+    const res = await fetch(URL);
+    const data = await res.json();
+    getPhotos(data)
+
+
+    // fetch(URL)
+    // .then(res => res.json())
+    // .then(data => getPhotos(data))
 }
 
 const getPhotos = (photos) =>{

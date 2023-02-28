@@ -12,7 +12,7 @@ const photo = async() =>{
 
 const getPhotos = (photos) =>{
     console.log(photos);
-    photos.slice(0, 200).forEach((photo) => {
+    photos.slice(0, 50).forEach((photo) => {
         const {url, title, id} = photo;
         console.log(photo)
         const cardContainer = document.getElementById('card-container');
